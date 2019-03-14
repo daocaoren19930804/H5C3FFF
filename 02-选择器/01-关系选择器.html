@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /* 后代选择器 */
+    body li {
+      /*background-color: pink;*/
+    }
+    /* 子代选择器 */
+    ul > li {
+      /*background-color: red;*/
+    }
+
+    /* E + F  相邻选择符: 选中后面的第一个兄弟元素
+       .now + li: 先找到 .now 后面的第一个兄弟元素, 然后再判断是不是 li
+    */
+    .now + li {
+      /*background-color: blue;*/
+    }
+
+    /* E ~ F 兄弟选择符: 选中后面的所有兄弟元素 */
+    .now ~ * {
+      background-color: pink;
+    }
+    /*
+      ul li  后代
+      ul > li  子代
+      .now + li  选中后面的第一个兄弟元素, 并判断类型是不是 li
+      .now ~ li  选中后面所有的兄弟元素, 并判断类型是不是 li
+    */
+  </style>
+</head>
+<body>
+
+<ul>
+  <li>我是第1个li</li>
+  <li>我是第2个li</li>
+  <li class="now">我是第3个li</li>
+  <span>我是span</span>
+  <li>我是第4个li</li>
+  <li>我是第5个li</li>
+  <li>我是第6个li</li>
+  <li>我是第7个li</li>
+  <li>我是第8个li</li>
+  <li>我是第9个li</li>
+  <li>我是第10个li</li>
+</ul>
+
+
+</body>
+</html>

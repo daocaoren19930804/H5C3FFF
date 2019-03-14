@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 100px auto;
+
+        /* 让盒子旋转 css3  transform: rotate(角度deg); */
+        /* 标准写法, 在早期标准出来之前, 各大浏览器已经提前实现自己的旋转 */
+        /* transform: rotate(45deg); */
+
+        /* 兼容 chrome safari  */
+        -webkit-transform: rotate(45deg);
+        /* 兼容 IE */
+        -ms-transform: rotate(45deg);
+        /* 兼容 firefox */
+        -moz-transform: rotate(45deg);
+        /* 兼容 opera */
+        -o-transform: rotate(45deg);
+
+        /* 添加浏览器私有前缀的目的: 就是为了兼容不同低版本的浏览器 */
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

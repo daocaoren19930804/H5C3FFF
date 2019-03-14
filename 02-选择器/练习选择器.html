@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul {
+      margin: 50px;
+      border: 1px solid #000;
+    }
+    li {
+      height: 30px;
+      line-height: 30px;
+    }
+    li:not(:last-child) {
+      border-bottom:  1px solid #000;
+    }
+    input[type="checkbox"]:checked {
+      width: 20px;
+      height: 20px;
+     transition: all  1s ;
+    }
+    div:target {
+      color:red;
+      font-size:50px;
+
+    }
+    h1:target {
+     color:chartreuse;
+     font-size:40px;
+     transition:all 2s ;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>我是 li 元素</li>
+    <li>我是 li 元素</li>
+    <li>我是 li 元素</li>
+    <li>我是 li 元素</li>
+  </ul>
+   <a href="#nav1">导航1</a>
+   <a href="#nav2">导航2</a>
+   <a href="#nav3">导航3</a>
+
+
+  <input type="checkbox">
+  <input type="radio">
+  <input type="select">
+  <input type="password">
+  <input type="submit">
+  <input type="button">
+
+   <h1 id="nav1">第一个模块</h1>
+   <h1 id="nav2">第二个模块</h1>
+   <h1 id="nav3">第三个模块</h1>
+
+  <a href="#pp">鹏鹏</a>
+  <div id="pp">找我干啥</div>
+</body>
+</html>

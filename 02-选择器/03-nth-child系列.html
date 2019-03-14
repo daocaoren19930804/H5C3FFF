@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      /* 选中父元素的第一个子元素, 且类型是 li */
+      /* 1. 先找父元素的第一个子元素,
+       2. 再判断类型是不是 li */
+      li:first-child {
+        /*background-color: pink;*/
+      }
+
+      li:last-child {
+        /*background-color: blue;*/
+      }
+
+      /* 找父元素的第三个子元素, 且类型是 li */
+      li:nth-child(3) {
+        /*background-color: blue;*/
+      }
+
+      /* 实现隔行变色 */
+      li:nth-child(odd) {
+        /*background-color: orange;*/
+      }
+      li:nth-child(even) {
+        /*background-color: skyblue;*/
+      }
+      li:hover {
+        /*background-color: yellow;*/
+      }
+
+      /*
+      nth-child
+      1. 传数字, nth-child(3) 找第三个
+      2. 传 odd/even, 表示奇数个或者偶数个
+            odd  奇数个
+            even 偶数个
+      3. nth-child(2n) 偶数个
+         nth-child(2n-1) 奇数个
+         n数值, 从0开始, 1, 2, 3, 4......
+    */
+      li:nth-child(2n + 5) {
+        /* background-color: orange; */
+      }
+      li:nth-child(2n + 1) {
+        background-color: skyblue;
+      }
+
+      /* 找到父元素, 看是不是父元素中的唯一子元素 */
+      p:only-child {
+        background-color: blue;
+      }
+
+      li:nth-last-child(3) {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>我是第1个li元素</li>
+      <li>我是第2个li元素</li>
+      <li>我是第3个li元素</li>
+      <li>我是第4个li元素</li>
+      <li>我是第5个li元素</li>
+      <li>我是第6个li元素</li>
+      <li>我是第7个li元素</li>
+      <li>我是第8个li元素</li>
+      <li>我是第9个li元素</li>
+      <li>我是第10个li元素</li>
+    </ul>
+
+    <div>
+      <p>我是p元素</p>
+      <p>我是p元素</p>
+    </div>
+  </body>
+</html>

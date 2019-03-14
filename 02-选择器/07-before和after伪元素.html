@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    /*
+      before 作用: 在子元素的最前面添加一个伪元素
+      after 作用: 在子元素的最后面添加一个伪元素
+      使用伪元素注意点:
+        1. 默认是行内元素
+           如果要设宽高, 需要转换显示模块
+           (1) 转成 block/inline-block
+           (2) 脱标, position: absolute;
+
+        2. 必须要设置 content 属性
+
+       使用场景: 一般可以用于 遮罩层, 小图标
+    */
+    div:before {
+      content: 'hello';
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      display: block;
+    }
+    div:after {
+      content: 'world';
+    }
+  </style>
+</head>
+<body>
+
+
+<div>
+
+  <p>我是p元素</p>
+  <p>我是p元素</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /* 属性选择器 */
+
+    /* 找到有 skill 属性的 li 元素 */
+    li[skill] {
+      /*background-color: pink;*/
+    }
+
+    /* 找到有 skill 属性, 且属性值为 sellMeng 的 li 元素
+       要求: 属性值完全等于 sellMeng
+    */
+    li[skill="sellMeng"] {
+      /*background-color: blue;*/
+    }
+
+    /* 找到有 skill 属性, 且属性值以 sell 开头的 li */
+    li[skill^="sell"] {
+      /*background-color: blue;*/
+    }
+
+    /* 找到 有 skill 属性, 且属性值 以 Meng 结尾 */
+    li[skill$="Meng"] {
+      /*background-color: pink;*/
+    }
+
+    /* 找到 有 skill 属性, 且属性值包含 Meng */
+    li[skill*="Meng"] {
+      /*background-color: blue;*/
+    }
+    /*
+      li[skill]
+      li[skill="meng"]
+      li[skill^="sell"]
+      li[skill$="meng"]
+      li[skill*="meng"]
+    */
+    input[type="text"] {
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+
+
+<ul>
+  <li skill="sellMeng">鹏鹏</li>
+  <li skill="veryMeng">春春</li>
+  <li skill="mengMengDa">燕燕</li>
+  <li>涛涛</li>
+  <li skill="sellFriends">花花</li>
+</ul>
+
+<div>
+  <input type="text">
+  <input type="button" value="登陆">
+</div>
+
+</body>
+</html>

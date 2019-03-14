@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+      /* 表示获取焦点的时候起作用 */
+      input:focus {
+        background-color: pink;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      ul {
+        margin: 50px;
+        border: 1px solid #000;
+      }
+      li {
+        height: 30px;
+        line-height: 30px;
+      }
+      /* 先选中所有 li, 再排除最后一个 li */
+      li:not(:last-child) {
+        border-bottom: 1px solid #000;
+      }
+
+      /* 匹配没有任何内容(子元素和文本都算)的 div */
+      div:empty {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        border: 1px solid #000;
+      }
+
+      input[type='checkbox'] {
+        /*
+         transition: 过渡
+         all 表示对所有属性实现过渡
+         1s 表示过渡动画时间 1s
+         transition 过渡, 只需要有两个状态, 即可实现过渡动画
+      */
+        transition: all 5s;
+      }
+
+      input[type='checkbox']:checked {
+        width: 200px;
+        height: 200px;
+      }
+
+      /* 如果 h1 标签成为 目标对象时, 可以起作用 */
+      h1:target {
+        color: red;
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#nav1">导航1</a>
+    <a href="#nav2">导航2</a>
+    <a href="#nav3">导航3</a>
+
+    <!-- 伪类选择器统一特征 : 单冒号 -->
+    <input type="text" />
+
+    <ul>
+      <li>我是 li 元素</li>
+      <li>我是 li 元素</li>
+      <li>我是 li 元素</li>
+    </ul>
+
+    <div></div>
+
+    <input type="checkbox" />
+
+    <h1 id="nav1">第一个模块</h1>
+    <h1 id="nav2">第二个模块</h1>
+    <h1 id="nav3">第三个模块</h1>
+  </body>
+</html>
